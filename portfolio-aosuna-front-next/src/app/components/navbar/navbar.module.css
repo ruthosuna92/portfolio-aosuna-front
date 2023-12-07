@@ -1,0 +1,43 @@
+.logo {
+    border-radius: 50%;
+background: #edf1f4;
+box-shadow:  5px 5px 13px #afb2b5,
+             -5px -5px 13px #ffffff;
+            
+}
+
+.logoContainer {
+    color: var(--color-magenta);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.nav {
+    padding: 0.6rem;
+    min-height: 10vh;
+background: #edf1f4;
+box-shadow:  5px 5px 10px #989a9c,
+             -5px -5px 10px #ffffff;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navItems {
+
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.navItems li {
+    transition: all 0.2s ease-in-out;
+}
+.navItems li:hover {
+    transform: scale(1.3);
+    color: var(--color-magenta);
+}

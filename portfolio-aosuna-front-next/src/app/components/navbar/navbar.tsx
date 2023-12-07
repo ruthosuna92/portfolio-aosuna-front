@@ -1,3 +1,4 @@
+"use client"
 import style from "./navbar.module.css"
 import Image from "next/image";
 import logo from "../../../../public/logo.png"
@@ -5,13 +6,13 @@ import logo from "../../../../public/logo.png"
 function NavBar(){
 
     return <>
-        <nav>
+        <nav className={style.nav}>
             <div className={style.logoContainer}>
-                <Image src={logo} alt="logo" width={50} height={50}/>
+                <Image className={style.logo} src={logo} alt="logo" width={50} height={50}/>
                 <h2>AleDev</h2>
             </div>
             <div className={style.menuHamburguer}>
-                <ul>
+                <ul className={style.navItems}>
                     <li>
                         <a href="#">Home</a>
                     </li>
@@ -32,9 +33,6 @@ function NavBar(){
                     </li>
                 </ul>
             </div>
-            <ul>
-
-            </ul>
         </nav>
     </>
 }
