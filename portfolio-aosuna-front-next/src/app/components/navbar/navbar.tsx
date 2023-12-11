@@ -2,6 +2,7 @@
 import style from "./navbar.module.css"
 import Image from "next/image";
 import logo from "../../../../public/logo.png"
+import SwitchTheme from "../switchTheme/switchTheme";
 
 function NavBar(){
 
@@ -31,7 +32,10 @@ function NavBar(){
                     <li>
                         <a href="#">Contact</a>
                     </li>
+                    
+            <SwitchTheme/>
                 </ul>
+                
             </div>
         </nav>
     </>
