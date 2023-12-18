@@ -1,8 +1,7 @@
 .logo {
     border-radius: 50%;
-background: #edf1f4;
-box-shadow:  5px 5px 13px #afb2b5,
-             -5px -5px 13px #ffffff;
+box-shadow:  5px 5px 13px var(--color-shadow-dark),
+             -5px -5px 13px var(--color-shadow-light);
             
 }
 
@@ -17,9 +16,8 @@ box-shadow:  5px 5px 13px #afb2b5,
 .nav {
     padding: 0.6rem;
     min-height: 10vh;
-background: #edf1f4;
-box-shadow:  5px 5px 10px #989a9c,
-             -5px -5px 10px #ffffff;
+box-shadow:  5px 5px 10px var(--color-shadow-dark),
+             -5px -5px 10px var(--color-shadow-light);
      display: flex;
     align-items: center;
     justify-content: space-between;

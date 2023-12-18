@@ -3,10 +3,12 @@ import style from "./navbar.module.css"
 import Image from "next/image";
 import logo from "../../../../public/logo.png"
 import SwitchTheme from "../switchTheme/switchTheme";
+import { useSelector } from "react-redux";
 
 function NavBar(){
 
-    return <>
+    const dark = useSelector((state:any) => state.themeReducer.dark)
+    return <div className={dark ? "dark-theme" : ""}>
         <nav className={style.nav}>
             <div className={style.logoContainer}>
                 <Image className={style.logo} src={logo} alt="logo" width={50} height={50}/>
@@ -38,7 +40,7 @@ function NavBar(){
                 
             </div>
         </nav>
-    </>
+    </div>
 }
 
 export default NavBar;

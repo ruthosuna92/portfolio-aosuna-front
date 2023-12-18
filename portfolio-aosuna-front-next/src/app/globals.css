@@ -3,6 +3,8 @@
   --color-magenta: #ea00ed;
   --color-green: #086305;
   --color-dark: #1b1c1d;
+  --color-shadow-dark: #989a9c;
+  --color-shadow-light: #ffffff;
 }
 
 * {
@@ -19,7 +21,12 @@ body {
   font-size: 1.2rem;
   color: hsla(240, 3%, 12%, 0.9);
 }
-
+.dark-theme{
+  background-color: var(--color-dark);
+  color: var(--color-bg);
+  --color-shadow-dark:#000000;
+  --color-shadow-light: #383a3b;
+  }
 input, button, a {
   font-family: inherit;
   color: inherit;

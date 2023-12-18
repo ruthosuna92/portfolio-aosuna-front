@@ -1,12 +1,27 @@
+import { useAppDispatch } from "@/redux/hooks"
 import style from "./switchTheme.module.css"
+import { isDark, isLight } from "@/redux/features/themeSlice"
+import { useAppSelector } from "@/redux/hooks"
+import { useSelector } from "react-redux"
 
 
 const SwitchTheme = () => {
 
 
+  const dark = useAppSelector((state:any) => state.themeReducer.dark)
+ console.log(dark)
+  const dispatch = useAppDispatch()
+  const handleTheme = () => {
+    if(dark){
+      dispatch(isLight())
+    } else {
+      dispatch(isDark())
+    }
+    console.log("switching to " + dark)
+  }
     return <div>
     <label className={style.themeSwitch}>
-    <input type="checkbox" className={style.themeSwitch__checkbox} /> 
+    <input type="checkbox" className={style.themeSwitch__checkbox} onClick={handleTheme}/> 
     <div className={style.themeSwitch__container}>
       <div className={style.themeSwitch__clouds}></div>
       <div className={style.themeSwitch__starsContainer}>
